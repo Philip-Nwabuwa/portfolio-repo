@@ -46,6 +46,7 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Actions">
             <CommandItem
+            className="cursor-pointer"
               onSelect={() => {
                 setOpen(false);
                 window.print();
@@ -57,6 +58,7 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
               <CommandItem
+              className="cursor-pointer"
                 key={url}
                 onSelect={() => {
                   setOpen(false);
